@@ -9,15 +9,23 @@
 function ConvertHandler() {
   
   this.getNum = function(input) {
-    var result;
-    
-    return result;
+    const splitInput = input.match(/[a-z]+|[^a-z]+/gi)
+    if (!isNaN(splitInput[0])) {
+      return splitInput[0]
+    }
+    else {
+      return "invalid number"
+    }
   };
   
   this.getUnit = function(input) {
-    var result;
-    
-    return result;
+    const validUnits = ['gal', 'L', 'lbs', 'kg', 'mi', 'km'];
+    if (validUnits.toLowerCase().includes(input.toLowerCase())) {
+      var input;
+    }
+    else {
+      return 'invalid unit'
+    }
   };
   
   this.getReturnUnit = function(initUnit) {
